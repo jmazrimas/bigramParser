@@ -1,0 +1,22 @@
+{
+  "name": "bigramparser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmazrimas/bigramParser.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmazrimas/bigramParser/issues"
+  },
+  "homepage": "https://github.com/jmazrimas/bigramParser#readme",
+  "dependencies": {
+    "mocha": "^4.0.1"
+  }
+}
