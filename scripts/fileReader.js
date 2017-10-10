@@ -1,8 +1,14 @@
 fs = require('fs');
 
 module.exports = {
-  parseInputFile: () => {
-
+  returnFileData: (fileLocation) => {
+    var rawData = fs.readFileSync(fileLocation, "utf8");
+    // define "words" as anything separated by a space
+    //   or a newline
+    var processedData = rawData.split("\n").join("").split(" ")
+    // this assumes multiple spaces should be treated
+    //   as one
+    return processedData.filter((x)=>{return x != ""})
   },
   fileInputCheck: (args) => {
     // third arg should be file location
