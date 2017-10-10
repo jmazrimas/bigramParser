@@ -13,7 +13,7 @@ describe('bigram', function() {
   });
 
   it('should return a single entry for two words', function() {
-    expect(bigram.returnHistogram(['foo','bar'])).to.equal({'foo bar': 1});
+    expect(bigram.returnHistogram(['foo','bar'])['foo bar']).to.be(1)
   });
 
 });
