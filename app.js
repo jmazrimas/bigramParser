@@ -6,7 +6,8 @@ var existingFileLocation = fileReader.fileInputCheck(process.argv);
 if (existingFileLocation) {
   fileReader.fileExists(existingFileLocation).then((fileExists) => {
     if (fileExists) {
-      fileData = fileReader.returnFileData(existingFileLocation);
+      rawFileData = fileReader.returnFileData(existingFileLocation);
+      fileData = bigram.processData(rawFileData);
       console.log(bigram.returnHistogram(fileData));
     } else {
       console.log("'", existingFileLocation, "' not found. Please provide a valid input.")
