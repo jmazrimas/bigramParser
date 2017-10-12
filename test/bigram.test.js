@@ -32,4 +32,10 @@ describe('bigram', function() {
     expect(bigram.returnHistogram(['FoO','bar','FOo', 'Bar'])['bar foo']).to.be(1);
   });
 
+  it('should ignore non-letter characters', function() {
+    var rawData = "this. has some, punct!uation's in it."
+    var cleanedData = ["this","has","some","punct!uation's","in","it"];
+    expect(bigram.processData(rawData)).to.eql(cleanedData);
+  });
+
 });
