@@ -32,5 +32,4 @@ describe('bigram', function() {
     expect(bigram.returnHistogram(['FoO','bar','FOo', 'Bar'])['bar foo']).to.be(1);
   });
 
-
 });
