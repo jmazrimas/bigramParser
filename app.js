@@ -12,4 +12,6 @@ if (existingFileLocation) {
       console.log("'", existingFileLocation, "' not found. Please provide a valid input.")
     }
   })
+} else {
+  console.log("No file provided. Please provide a valid input.")
 }
